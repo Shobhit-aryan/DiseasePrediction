@@ -23,7 +23,10 @@ def predict():
         data = [input_symptoms]
         vect = cv.transform(data).toarray()
         my_prediction = classifier.predict(vect)
-        return render_template('index.html',prediction=my_prediction)
+        if(my_prediction==29):
+            return render_template('index.html', prediction="ughh")
+        else:
+            return render_template('index.html',prediction=my_prediction)
     
 if __name__=='__main__':
     app.run(debug=True)
