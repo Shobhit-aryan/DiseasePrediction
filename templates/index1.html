@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Predictor</title>
+</head>
+<body>
+    <h1>DiseasePredictor using naive bayes</h1>
+    <form action="/predict" method="POST">
+        <textarea name="input_symptoms" id="" cols="30" rows="10"></textarea>
+        <input type="submit" value="predict">
+    </form>
+    <h1>prediction value: {{prediction}}</h1>
+</body>
+<style>
+*{
+	background-color:blue;
+}
+</style>
+</html>

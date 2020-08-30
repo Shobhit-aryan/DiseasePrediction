@@ -1,21 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Disease Predictor</title>
+    <title>Document</title>
 </head>
+
 <body>
-    <h1>DiseasePredictor using naive bayes</h1>
-    <form action="/predict" method="POST">
-        <textarea name="input_symptoms" id="" cols="30" rows="10"></textarea>
-        <input type="submit" value="predict">
-    </form>
-    <h1>prediction value: {{prediction}}</h1>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <nav>
+            <ul>
+                <li><a href="#" class="cool-link">Home</a></li>
+                <li><a href="#" class="cool-link">About</a></li>
+                <li><a href="#features" class="cool-link">Features</a></li>
+                <li><a href="#" class="cool-link">Team</a></li>
+                <li><a href="#" class="cool-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="banner">
+        <h1>AI Driven pocket docter</h1><br>
+        <p>Now predict the disease with few easy steps</p><br>
+        
+        <div class="container-1">
+            
+            <img id="doctorpic" src="doctor.svg">
+        </div>
+        
+    </section>
+    <div class="conainer-2">
+        <div class="card">
+            <div class="imgBx">
+                <img src="symptom.png">
+            </div>
+            <div class="contentBx">
+                <h2>Symptom Checker</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur 
+                    adipisicing elit. Quod corporis 
+                    nesciunt sapiente fuga eaque itaque ullam
+                     voluptatibus quaerat rerum voluptas.</p>
+            </div>
+        </div>
+        </div>
+    
+
+    <script type="text/javascript">
+        window.addEventListener("scroll", function () {
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        })
+    </script>
 </body>
 <style>
-*{
-	background-color:blue;
-}
+    html {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-size: 62.5%;
+        font-style: bold;
+
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        min-height: 500rem;
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: 1s;
+        padding: 1rem 1rem;
+        z-index: 1000;
+        font-size: 2rem;
+    }
+
+    header.sticky {
+        padding: 1rem 1rem;
+        background: linear-gradient(45deg, #05f9ff, #8de7b6, #00b5ff);
+
+    }
+
+    header .logo {
+        position: relative;
+        font-weight: 700;
+        color: #fff;
+        text-decoration: none;
+        font-size: 3em;
+
+    }
+
+    nav ul {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    nav ul li {
+        position: relative;
+        list-style: none;
+    }
+
+    nav ul li a {
+        position: relative;
+        margin: 0 15px;
+        text-decoration: none;
+        color: white;
+        letter-spacing: 2px;
+        font-weight: 500px;
+        transition: 0.6s;
+    }
+
+    .cool-link:hover {
+        border-bottom: 0.5rem double white;
+
+    }
+
+    .banner {
+        position: relative;
+        display:block;
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(63deg, #05f9ff, #8de7b6, #00b5ff);
+        background-size: 500% 500%;
+
+        -webkit-animation: bganimation 5s ease infinite;
+        -moz-animation: bganimation 5s ease infinite;
+        animation: bganimation 5s ease infinite;
+    }
+
+    @-webkit-keyframes bganimation {
+        0% {
+            background-position: 0% 50%
+        }
+
+        50% {
+            background-position: 100% 50%
+        }
+
+        100% {
+            background-position: 0% 50%
+        }
+    }
+
+    @-moz-keyframes bganimation {
+        0% {
+            background-position: 0% 50%
+        }
+
+        50% {
+            background-position: 100% 50%
+        }
+
+        100% {
+            background-position: 0% 50%
+        }
+    }
+
+    @keyframes bganimation {
+        0% {
+            background-position: 0% 50%
+        }
+
+        50% {
+            background-position: 100% 50%
+        }
+
+        100% {
+            background-position: 0% 50%
+        }
+    }
+
+    header.sticky logo,
+    header.sticky ul li a {
+        color: #000;
+    }
+    h1{
+        padding-left: 3rem;
+        display: inline;
+        position: relative;
+        font-size:6rem;
+        top:30rem;
+        color:white;
+        
+
+    }
+    p{
+        padding-left: 10rem;
+        display: inline;
+        position: relative;
+        font-size:2.5rem;
+        top:31rem;
+        color:white;
+
+    }
+    .container-1{
+        position: relative;
+        animation:animate 4s ease-in-out infinite;
+    }
+    @keyframes animate{
+        0% {
+            top:8rem;
+        }
+        50%{
+            top:12rem;
+        }
+        100%{
+            top:8rem;
+        }
+    }
+    #doctorpic{
+        float:right;
+        bottom: 50%;
+        height:50rem;
+        width:50%;
+   }
+   .container-2{
+       position: relative;
+       display:flex;
+       justify-content: space-around;
+       align-items: center;
+       flex-wrap: wrap;
+       width:110rem;
+   }
+   .container-2 .card{
+       width:32rem;
+       margin:2rem;
+       padding:4rem 3rem;
+       background: #ebf5fc;
+       box-shadow: -6px -6px 20px rgba(255,255,255,.1),
+                    6px 6px 20px rgba(0,0,0,0.1);
+   }
+   .container-2 .card:hover{
+       box-shadow: inset -6px -6px 10px rgba(255,255,255,1),
+                   inset 6px 6px 20px rgba(0,0,0,0.1);
+   }
 </style>
+
 </html>
