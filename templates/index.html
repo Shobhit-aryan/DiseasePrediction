@@ -23,28 +23,48 @@
     <section class="banner">
         <h1>AI Driven pocket docter</h1><br>
         <p>Now predict the disease with few easy steps</p><br>
-        
         <div class="container-1">
-            
             <img id="doctorpic" src="doctor.svg">
         </div>
-        
     </section>
-    <div class="conainer-2">
-        <div class="card">
-            <div class="imgBx">
-                <img src="symptom.png">
+    <section class="features">
+        <div class="container-2">
+            <div class="card">
+                <div class="imgBx">
+                    <img src="cough.png">
+                    <h3>symptoms</h3>
+                </div>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Aliquid, ea. Quo necessitatibus, numquam animi vero
+                        consequuntu</p>
+                </div>
             </div>
-            <div class="contentBx">
-                <h2>Symptom Checker</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur 
-                    adipisicing elit. Quod corporis 
-                    nesciunt sapiente fuga eaque itaque ullam
-                     voluptatibus quaerat rerum voluptas.</p>
+            <div class="card">
+                <div class="imgBx">
+                    <img src="cough.png">
+                    <h3>a-z</h3>
+                </div>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Aliquid, ea. Quo necessitatibus, numquam animi vero
+                        consequuntu</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="imgBx">
+                    <img src="cough.png">
+                    <h3>disease</h3>
+                </div>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Aliquid, ea. Quo necessitatibus, numquam animi vero
+                        consequuntu</p>
+                </div>
             </div>
         </div>
-        </div>
-    
+    </section>
+
 
     <script type="text/javascript">
         window.addEventListener("scroll", function () {
@@ -128,7 +148,7 @@
 
     .banner {
         position: relative;
-        display:block;
+        display: block;
         width: 100%;
         height: 100vh;
         background: linear-gradient(63deg, #05f9ff, #8de7b6, #00b5ff);
@@ -185,66 +205,126 @@
     header.sticky ul li a {
         color: #000;
     }
-    h1{
+
+    .banner h1 {
         padding-left: 3rem;
         display: inline;
         position: relative;
-        font-size:6rem;
-        top:30rem;
-        color:white;
-        
+        font-size: 6rem;
+        top: 30rem;
+        color: white;
+
 
     }
-    p{
+
+    .banner p {
         padding-left: 10rem;
         display: inline;
         position: relative;
-        font-size:2.5rem;
-        top:31rem;
-        color:white;
+        font-size: 2.5rem;
+        top: 31rem;
+        color: white;
 
     }
-    .container-1{
+
+    .container-1 {
         position: relative;
-        animation:animate 4s ease-in-out infinite;
+        animation: animate 4s ease-in-out infinite;
     }
-    @keyframes animate{
+
+    @keyframes animate {
         0% {
-            top:8rem;
+            top: 8rem;
         }
-        50%{
-            top:12rem;
+
+        50% {
+            top: 12rem;
         }
-        100%{
-            top:8rem;
+
+        100% {
+            top: 8rem;
         }
     }
-    #doctorpic{
-        float:right;
+
+    #doctorpic {
+        float: right;
         bottom: 50%;
-        height:50rem;
-        width:50%;
-   }
-   .container-2{
-       position: relative;
-       display:flex;
-       justify-content: space-around;
-       align-items: center;
-       flex-wrap: wrap;
-       width:110rem;
-   }
-   .container-2 .card{
-       width:32rem;
-       margin:2rem;
-       padding:4rem 3rem;
-       background: #ebf5fc;
-       box-shadow: -6px -6px 20px rgba(255,255,255,.1),
-                    6px 6px 20px rgba(0,0,0,0.1);
-   }
-   .container-2 .card:hover{
-       box-shadow: inset -6px -6px 10px rgba(255,255,255,1),
-                   inset 6px 6px 20px rgba(0,0,0,0.1);
-   }
+        height: 50rem;
+        width: 50%;
+    }
+
+    .features {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #ebf5fc;
+        overflow: hidden;
+        min-height: 100vh;
+    }
+
+    .container-2 {
+        position: relative;
+    display: flex;
+
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 110rem;
+    }
+
+    .container-2 .card {
+        width: 32rem;
+        margin: 2rem;
+        padding: 4rem 3rem;
+        background: #ebf5fc;
+        border-radius: 2rem;
+        box-shadow: -6px -6px 20px rgba(255, 255, 255, 1),
+            6px 6px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .container-2 .card:before {
+        content: '';
+        position: absolute;
+        top: -15px;
+        left: 0;
+        width:
+    }
+
+    .container-2 .card:hover {
+        transform: translateY(-2rem);
+        transition:0.5s;
+        box-shadow: inset -6px -6px 10px rgba(255, 255, 255, 0.5),
+                inset 6px 6px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .container-2 .card .imgBx {
+        position: relative;
+        width: 30rem;
+        height: 20rem;
+        background: linear-gradient(45deg, #05f9ff, #8de7b6, #00b5ff);
+       text-align: center;
+    }
+
+    .container-2 .card .imgBx img {
+        max-width: 10rem;
+    }
+
+    .container-2 .card .imgBx h3 {
+        font-size: 3rem;
+        position: relative;
+        color: white;
+        margin-top: 1rem;
+        font-weight: 1000;
+        letter-spacing: 0.2rem;
+    }
+
+    .container-2 .card .content {
+        position: relative;
+        text-align: center;
+        padding: 2rem;
+        color: #777;
+        font-size: 1.5rem;
+    }
 </style>
 
 </html>
