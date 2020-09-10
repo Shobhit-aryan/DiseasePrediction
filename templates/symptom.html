@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <nav>
+            <ul>
+                <li><a href="#" class="cool-link">Home</a></li>
+                <li><a href="#" class="cool-link">About</a></li>
+                <li><a href="#features" class="cool-link">Features</a></li>
+                <li><a href="#" class="cool-link">Team</a></li>
+                <li><a href="#" class="cool-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container-3">
+        <form class="input-form" action="{{ url_for('predict') }}" method="POST">
+            <h3>Drop-Down list search using Datalist</h3>
+            <div class="symptom-box">
+                <h4>Input your favorite Text Editor</h4>
+                <input list=text_editors>
+                <button>▼</button>
+                <datalist id="text_editors">
+                    <select multiple size=8>
+                        <option value="Atom">Atom
+                        <option value="Brackets">Brackets
+                        <option value="Notepad ++">Notepad ++
+                        <option value="Notepad">Notepad
+                        <option value="Sublime Text">Sublime Text
+                        <option value="TextEdit">TextEdit
+                        <option value="TextMate">TextMate
+                        <option value="Wordpad">Wordpad
+                    </select>
+            </div>
+
+            <div class="symptom-box">
+                <h4>Input your favorite Text Editor</h4>
+                <input list=text_editors>
+                <button>▼</button>
+                <datalist id="text_editors">
+                    <select multiple size=8>
+                        <option value="Atom">Atom
+                        <option value="Brackets">Brackets
+                        <option value="Notepad ++">Notepad ++
+                        <option value="Notepad">Notepad
+                        <option value="Sublime Text">Sublime Text
+                        <option value="TextEdit">TextEdit
+                        <option value="TextMate">TextMate
+                        <option value="Wordpad">Wordpad
+                    </select>
+            </div>
+
+            <input type="submit" class="myButton" value="Predict Score">
+        </form>
+    </div>
+    <footer class="footer">
+
+    </footer>
+    <script type="text/javascript">
+
+    </script>
+</body>
+<style>
+    html {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-size: 62.5%;
+        font-style: bold;
+
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: 1s;
+        padding: 1rem 1rem;
+        background: linear-gradient(45deg, #05f9ff, #8de7b6, #00b5ff);
+        font-size: 2rem;
+        font-family: "Roboto", sans-serif;
+    }
+
+    header.sticky {
+        padding: 1rem 1rem;
+
+
+    }
+
+    header .logo {
+        position: relative;
+        font-weight: 700;
+        color: #fff;
+        text-decoration: none;
+        font-size: 3em;
+
+    }
+
+    nav ul {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    nav ul li {
+        position: relative;
+        list-style: none;
+    }
+
+    nav ul li a {
+        position: relative;
+        margin: 0 15px;
+        text-decoration: none;
+        color: white;
+        letter-spacing: 2px;
+        font-weight: 500px;
+        transition: 0.6s;
+    }
+
+    .cool-link:hover {
+        border-bottom: 0.5rem double white;
+
+    }
+
+    header.sticky logo,
+    header.sticky ul li a {
+        color: #000;
+    }
+
+    .container-3 {
+        position: fixed;
+        top:100px;
+        width: 100%;
+        background-color: rgb(184, 239, 243);
+    }
+    .input-form{
+        top:250px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        justify-items: flex-start;
+        align-self: start;
+        align-content: center;
+        height: 70rem;
+        width: 100%;
+
+    }
+
+    input {
+        width: 250px;
+        height: 30px;
+        padding: 3px;
+        border: 1px solid #DDE1E4;
+    }
+
+    select {
+        width: 258px;
+        position: relative;
+        left: -17px;
+        margin: 0;
+        border: 1px solid #DDE1E4;
+        border-top: none;
+        font-size: 9pt;
+    }
+
+    datalist {
+        display: none;
+    }
+
+    option {
+        padding: 3px;
+    }
+
+    option:hover {
+        background-color: #ea6811;
+    }
+
+    button {
+        width: 30px;
+        height: 38px;
+        position: relative;
+        left: -5px;
+        border: 1px solid #DDE1E4;
+        border-left: none;
+        background-color: #11E8EA;
+        cursor: pointer;
+    }
+
+    h3,
+    h4 {
+        text-align: center;
+    }
+
+
+    /* to hide datalist arrow in webkit */
+
+    input::-webkit-calendar-picker-indicator {
+        display: none;
+    }
+
+    .footer {
+        width: 100%;
+        height: 50px;
+        background-color: green;
+    }
+</style>
+
+</html>

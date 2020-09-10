@@ -27,39 +27,56 @@
             <img id="doctorpic" src="doctor.svg">
         </div>
     </section>
-    <section class="features">
+    <section id="features">
         <div class="container-2">
             <div class="card">
                 <div class="imgBx">
-                    <img src="cough.png">
-                    <h3>symptoms</h3>
+                    <img src="symptom.png">
+                    <h3>Symptom Checker</h3>
                 </div>
                 <div class="content">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Aliquid, ea. Quo necessitatibus, numquam animi vero
-                        consequuntu</p>
+                    <p>This tool allows you to choose a variety of
+                        factors related to your
+                        symptom, in order to help
+                        you narrow the potential medical conditions
+                        related to your symptom.</p>
+                    <a href="symptom.html">Click Here</a>
                 </div>
             </div>
             <div class="card">
                 <div class="imgBx">
-                    <img src="cough.png">
-                    <h3>a-z</h3>
+                    <img src="disease.png">
+                    <h3>Disease and conditions</h3>
                 </div>
                 <div class="content">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing
                         elit. Aliquid, ea. Quo necessitatibus, numquam animi vero
                         consequuntu</p>
+                    <a href="#">Click Here</a>
                 </div>
             </div>
             <div class="card">
                 <div class="imgBx">
-                    <img src="cough.png">
-                    <h3>disease</h3>
+                    <img src="medicine.png">
+                    <h3>Drugs and supplement</h3>
                 </div>
                 <div class="content">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing
                         elit. Aliquid, ea. Quo necessitatibus, numquam animi vero
                         consequuntu</p>
+                    <a href="#">Click Here</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="imgBx">
+                    <img src="test.png">
+                    <h3>Tests and Procedures</h3>
+                </div>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Aliquid, ea. Quo necessitatibus, numquam animi vero
+                        consequuntu</p>
+                    <a href="#">Click Here</a>
                 </div>
             </div>
         </div>
@@ -253,7 +270,7 @@
         width: 50%;
     }
 
-    .features {
+    #features {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -264,12 +281,12 @@
 
     .container-2 {
         position: relative;
-    display: flex;
+        display: flex;
 
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 110rem;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 110rem;
     }
 
     .container-2 .card {
@@ -292,9 +309,9 @@
 
     .container-2 .card:hover {
         transform: translateY(-2rem);
-        transition:0.5s;
+        transition: 0.5s;
         box-shadow: inset -6px -6px 10px rgba(255, 255, 255, 0.5),
-                inset 6px 6px 20px rgba(0, 0, 0, 0.05);
+            inset 6px 6px 20px rgba(0, 0, 0, 0.05);
     }
 
     .container-2 .card .imgBx {
@@ -302,11 +319,12 @@
         width: 30rem;
         height: 20rem;
         background: linear-gradient(45deg, #05f9ff, #8de7b6, #00b5ff);
-       text-align: center;
+        text-align: center;
     }
 
     .container-2 .card .imgBx img {
         max-width: 10rem;
+        margin-top: 1rem;
     }
 
     .container-2 .card .imgBx h3 {
@@ -324,6 +342,22 @@
         padding: 2rem;
         color: #777;
         font-size: 1.5rem;
+    }
+
+    .container-2 .card .content a {
+        display: inline-block;
+        padding: 1rem 2rem;
+        margin-top: 1.5rem;
+        border-radius: 4rem;
+        color: #32a3b1;
+        font-size: 1.6rem;
+        box-shadow: inset -4px -4px 15px rgba(255, 255, 255, 1),
+            inset 4px 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .container-2 .card .content a:hover {
+        box-shadow: inset -4px -4px 10px rgba(255, 255, 255, 1),
+            inset 4px 4px 10px rgba(0, 0, 0, 0.5);
     }
 </style>
 
