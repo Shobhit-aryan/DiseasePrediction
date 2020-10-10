@@ -5,100 +5,711 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
 </head>
 
 <body>
-    <h1>Search</h1>
-    <form action="{{ url_for('predict') }}" method="POST">
-        <h3>Drop-Down list search using Datalist</h3>
-        <h4>Input your favorite Text Editor</h4>
-        <input list=text_editors>
-        <button>▼</button>
-        <datalist id="text_editors">
-            <select multiple size=8>
-                <option value="Atom">Atom
-                <option value="Brackets">Brackets
-                <option value="Notepad ++">Notepad ++
-                <option value="Notepad">Notepad
-                <option value="Sublime Text">Sublime Text
-                <option value="TextEdit">TextEdit
-                <option value="TextMate">TextMate
-                <option value="Wordpad">Wordpad
-            </select>
-            
-        </datalist>
-        <input list=text_editors>
-        <button>▼</button>
-        <datalist id="text_editors">
-            <select multiple size=8>
-                <option value="Atom">Atom
-                <option value="Brackets">Brackets
-                <option value="Notepad ++">Notepad ++
-                <option value="Notepad">Notepad
-                <option value="Sublime Text">Sublime Text
-                <option value="TextEdit">TextEdit
-                <option value="TextMate">TextMate
-                <option value="Wordpad">Wordpad
-            </select>
-            
-        </datalist>
-        
-        <input type="submit" class="myButton" value="Predict Score">
-    </form>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <nav>
+            <ul>
+                <li><a href="#" class="cool-link">Home</a></li>
+                <li><a href="#" class="cool-link">About</a></li>
+                <li><a href="#features" class="cool-link">Features</a></li>
+                <li><a href="#" class="cool-link">Team</a></li>
+                <li><a href="#" class="cool-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container-3">
+        <h3>Symptom Checker</h3>
+        <form class="container-4" action="{{ url_for('predict') }}" method="POST">
+            <div class="input-form">
+                <div class="symptom-box">
+                    <h4>Symptom 1</h4>
+                    <input list=text_editors1>
+                    <datalist id="text_editors1">
+                        <select name="symp1" required>
+
+                            <option value=" abdominal_pain">
+                            <option value=" abnormal_menstruation">
+                            <option value=" acidity">
+                            <option value=" acute_liver_failure">
+                            <option value=" altered_sensorium">
+                            <option value=" anxiety">
+                            <option value=" back_pain">
+                            <option value=" belly_pain">
+                            <option value=" blackheads">
+                            <option value=" bladder_discomfort">
+                            <option value=" blister">
+                            <option value=" blood_in_sputum">
+                            <option value=" bloody_stool">
+                            <option value=" blurred_and_distorted_vision">
+                            <option value=" breathlessness">
+                            <option value=" brittle_nails">
+                            <option value=" bruising">
+                            <option value=" burning_micturition">
+                            <option value=" chest_pain">
+                            <option value=" chills">
+                            <option value=" cold_hands_and_feets">
+                            <option value=" coma">
+                            <option value=" congestion">
+                            <option value=" constipation">
+                            <option value=" continuous_feel_of_urine">
+                            <option value=" continuous_sneezing">
+                            <option value=" cough">
+                            <option value=" cramps">
+                            <option value=" dark_urine">
+                            <option value=" dehydration">
+                            <option value=" depression">
+                            <option value=" diarrhoea">
+                            <option value=" dischromic _patches">
+                            <option value=" distention_of_abdomen">
+                            <option value=" dizziness">
+                            <option value=" drying_and_tingling_lips">
+                            <option value=" enlarged_thyroid">
+                            <option value=" excessive_hunger">
+                            <option value=" extra_marital_contacts">
+                            <option value=" family_history">
+                            <option value=" fast_heart_rate">
+                            <option value=" fatigue">
+                            <option value=" fluid_overload">
+                            <option value=" foul_smell_of urine">
+                            <option value=" headache">
+                            <option value=" high_fever">
+                            <option value=" hip_joint_pain">
+                            <option value=" history_of_alcohol_consumption">
+                            <option value=" increased_appetite">
+                            <option value=" indigestion">
+                            <option value=" inflammatory_nails">
+                            <option value=" internal_itching">
+                            <option value=" irregular_sugar_level">
+                            <option value=" irritability">
+                            <option value=" irritation_in_anus">
+                            <option value=" joint_pain">
+                            <option value=" knee_pain">
+                            <option value=" lack_of_concentration">
+                            <option value=" lethargy">
+                            <option value=" loss_of_appetite">
+                            <option value=" loss_of_balance">
+                            <option value=" loss_of_smell">
+                            <option value=" malaise">
+                            <option value=" mild_fever">
+                            <option value=" mood_swings">
+                            <option value=" movement_stiffness">
+                            <option value=" mucoid_sputum">
+                            <option value=" muscle_pain">
+                            <option value=" muscle_wasting">
+                            <option value=" muscle_weakness">
+                            <option value=" nausea">
+                            <option value=" neck_pain">
+                            <option value=" nodal_skin_eruptions">
+                            <option value=" obesity">
+                            <option value=" pain_behind_the_eyes">
+                            <option value=" pain_during_bowel_movements">
+                            <option value=" pain_in_anal_region">
+                            <option value=" painful_walking">
+                            <option value=" palpitations">
+                            <option value=" passage_of_gases">
+                            <option value=" patches_in_throat">
+                            <option value=" phlegm">
+                            <option value=" polyuria">
+                            <option value=" prominent_veins_on_calf">
+                            <option value=" puffy_face_and_eyes">
+                            <option value=" pus_filled_pimples">
+                            <option value=" receiving_blood_transfusion">
+                            <option value=" receiving_unsterile_injections">
+                            <option value=" red_sore_around_nose">
+                            <option value=" red_spots_over_body">
+                            <option value=" redness_of_eyes">
+                            <option value=" restlessness">
+                            <option value=" runny_nose">
+                            <option value=" rusty_sputum">
+                            <option value=" scurring">
+                            <option value=" shivering">
+                            <option value=" silver_like_dusting">
+                            <option value=" sinus_pressure">
+                            <option value=" skin_peeling">
+                            <option value=" skin_rash">
+                            <option value=" slurred_speech">
+                            <option value=" small_dents_in_nails">
+                            <option value=" spinning_movements">
+                            <option value=" spotting_ urination">
+                            <option value=" stiff_neck">
+                            <option value=" stomach_bleeding">
+                            <option value=" stomach_pain">
+                            <option value=" sunken_eyes">
+                            <option value=" sweating">
+                            <option value=" swelled_lymph_nodes">
+                            <option value=" swelling_joints">
+                            <option value=" swelling_of_stomach">
+                            <option value=" swollen_blood_vessels">
+                            <option value=" swollen_extremeties">
+                            <option value=" swollen_legs">
+                            <option value=" throat_irritation">
+                            <option value=" toxic_look_(typhos)">
+                            <option value=" ulcers_on_tongue">
+                            <option value=" unsteadiness">
+                            <option value=" visual_disturbances">
+                            <option value=" vomiting">
+                            <option value=" watering_from_eyes">
+                            <option value=" weakness_in_limbs">
+                            <option value=" weakness_of_one_body_side">
+                            <option value=" weight_gain">
+                            <option value=" weight_loss">
+                            <option value=" yellow_crust_ooze">
+                            <option value=" yellow_urine">
+                            <option value=" yellowing_of_eyes">
+                            <option value=" yellowish_skin">
+                            <option value=" itching">
+                        </select>
+                   
+                </div>
 
 
-    <script type="text/javascript">
-        button = document.querySelector('button');
-        datalist = document.querySelector('datalist');
-        select = document.querySelector('select');
-        options = select.options;
+                <div class="symptom-box">
+                    <h4>Symptom 2</h4>
+                    <input list=text_editors2>
+                    <datalist id="text_editors2">
+                        <select name="symp2" required>
 
-        /* on arrow button click, show/hide the DDL*/
-        button.addEventListener('click', toggle_ddl);
+                            <option value=" abdominal_pain">
+                            <option value=" abnormal_menstruation">
+                            <option value=" acidity">
+                            <option value=" acute_liver_failure">
+                            <option value=" altered_sensorium">
+                            <option value=" anxiety">
+                            <option value=" back_pain">
+                            <option value=" belly_pain">
+                            <option value=" blackheads">
+                            <option value=" bladder_discomfort">
+                            <option value=" blister">
+                            <option value=" blood_in_sputum">
+                            <option value=" bloody_stool">
+                            <option value=" blurred_and_distorted_vision">
+                            <option value=" breathlessness">
+                            <option value=" brittle_nails">
+                            <option value=" bruising">
+                            <option value=" burning_micturition">
+                            <option value=" chest_pain">
+                            <option value=" chills">
+                            <option value=" cold_hands_and_feets">
+                            <option value=" coma">
+                            <option value=" congestion">
+                            <option value=" constipation">
+                            <option value=" continuous_feel_of_urine">
+                            <option value=" continuous_sneezing">
+                            <option value=" cough">
+                            <option value=" cramps">
+                            <option value=" dark_urine">
+                            <option value=" dehydration">
+                            <option value=" depression">
+                            <option value=" diarrhoea">
+                            <option value=" dischromic _patches">
+                            <option value=" distention_of_abdomen">
+                            <option value=" dizziness">
+                            <option value=" drying_and_tingling_lips">
+                            <option value=" enlarged_thyroid">
+                            <option value=" excessive_hunger">
+                            <option value=" extra_marital_contacts">
+                            <option value=" family_history">
+                            <option value=" fast_heart_rate">
+                            <option value=" fatigue">
+                            <option value=" fluid_overload">
+                            <option value=" foul_smell_of urine">
+                            <option value=" headache">
+                            <option value=" high_fever">
+                            <option value=" hip_joint_pain">
+                            <option value=" history_of_alcohol_consumption">
+                            <option value=" increased_appetite">
+                            <option value=" indigestion">
+                            <option value=" inflammatory_nails">
+                            <option value=" internal_itching">
+                            <option value=" irregular_sugar_level">
+                            <option value=" irritability">
+                            <option value=" irritation_in_anus">
+                            <option value=" joint_pain">
+                            <option value=" knee_pain">
+                            <option value=" lack_of_concentration">
+                            <option value=" lethargy">
+                            <option value=" loss_of_appetite">
+                            <option value=" loss_of_balance">
+                            <option value=" loss_of_smell">
+                            <option value=" malaise">
+                            <option value=" mild_fever">
+                            <option value=" mood_swings">
+                            <option value=" movement_stiffness">
+                            <option value=" mucoid_sputum">
+                            <option value=" muscle_pain">
+                            <option value=" muscle_wasting">
+                            <option value=" muscle_weakness">
+                            <option value=" nausea">
+                            <option value=" neck_pain">
+                            <option value=" nodal_skin_eruptions">
+                            <option value=" obesity">
+                            <option value=" pain_behind_the_eyes">
+                            <option value=" pain_during_bowel_movements">
+                            <option value=" pain_in_anal_region">
+                            <option value=" painful_walking">
+                            <option value=" palpitations">
+                            <option value=" passage_of_gases">
+                            <option value=" patches_in_throat">
+                            <option value=" phlegm">
+                            <option value=" polyuria">
+                            <option value=" prominent_veins_on_calf">
+                            <option value=" puffy_face_and_eyes">
+                            <option value=" pus_filled_pimples">
+                            <option value=" receiving_blood_transfusion">
+                            <option value=" receiving_unsterile_injections">
+                            <option value=" red_sore_around_nose">
+                            <option value=" red_spots_over_body">
+                            <option value=" redness_of_eyes">
+                            <option value=" restlessness">
+                            <option value=" runny_nose">
+                            <option value=" rusty_sputum">
+                            <option value=" scurring">
+                            <option value=" shivering">
+                            <option value=" silver_like_dusting">
+                            <option value=" sinus_pressure">
+                            <option value=" skin_peeling">
+                            <option value=" skin_rash">
+                            <option value=" slurred_speech">
+                            <option value=" small_dents_in_nails">
+                            <option value=" spinning_movements">
+                            <option value=" spotting_ urination">
+                            <option value=" stiff_neck">
+                            <option value=" stomach_bleeding">
+                            <option value=" stomach_pain">
+                            <option value=" sunken_eyes">
+                            <option value=" sweating">
+                            <option value=" swelled_lymph_nodes">
+                            <option value=" swelling_joints">
+                            <option value=" swelling_of_stomach">
+                            <option value=" swollen_blood_vessels">
+                            <option value=" swollen_extremeties">
+                            <option value=" swollen_legs">
+                            <option value=" throat_irritation">
+                            <option value=" toxic_look_(typhos)">
+                            <option value=" ulcers_on_tongue">
+                            <option value=" unsteadiness">
+                            <option value=" visual_disturbances">
+                            <option value=" vomiting">
+                            <option value=" watering_from_eyes">
+                            <option value=" weakness_in_limbs">
+                            <option value=" weakness_of_one_body_side">
+                            <option value=" weight_gain">
+                            <option value=" weight_loss">
+                            <option value=" yellow_crust_ooze">
+                            <option value=" yellow_urine">
+                            <option value=" yellowing_of_eyes">
+                            <option value=" yellowish_skin">
+                            <option value=" itching">
+                        </select>
+                    </datalist>
+                </div>
 
-        function toggle_ddl() {
-            if (datalist.style.display === '') {
-                datalist.style.display = 'block';
-                this.textContent = "▲";
-                /* If input already has a value, select that option from DDL */
-                var val = input.value;
-                for (var i = 0; i < options.length; i++) {
-                    if (options[i].text === val) {
-                        select.selectedIndex = i;
-                        break;
-                    }
-                }
-            } else hide_select();
-        }
 
-        /* when user selects an option from DDL, write it to text field */
-        select.addEventListener('change', fill_input);
+                <div class="symptom-box">
+                    <h4>Symptom 3</h4>
+                    <input list=text_editors3>
+                    <datalist id="text_editors3">
+                        <select name="symp3" required>
 
-        function fill_input() {
-            input.value = options[this.selectedIndex].value;
-            hide_select();
-        }
+                            <option value=" abdominal_pain">
+                            <option value=" abnormal_menstruation">
+                            <option value=" acidity">
+                            <option value=" acute_liver_failure">
+                            <option value=" altered_sensorium">
+                            <option value=" anxiety">
+                            <option value=" back_pain">
+                            <option value=" belly_pain">
+                            <option value=" blackheads">
+                            <option value=" bladder_discomfort">
+                            <option value=" blister">
+                            <option value=" blood_in_sputum">
+                            <option value=" bloody_stool">
+                            <option value=" blurred_and_distorted_vision">
+                            <option value=" breathlessness">
+                            <option value=" brittle_nails">
+                            <option value=" bruising">
+                            <option value=" burning_micturition">
+                            <option value=" chest_pain">
+                            <option value=" chills">
+                            <option value=" cold_hands_and_feets">
+                            <option value=" coma">
+                            <option value=" congestion">
+                            <option value=" constipation">
+                            <option value=" continuous_feel_of_urine">
+                            <option value=" continuous_sneezing">
+                            <option value=" cough">
+                            <option value=" cramps">
+                            <option value=" dark_urine">
+                            <option value=" dehydration">
+                            <option value=" depression">
+                            <option value=" diarrhoea">
+                            <option value=" dischromic _patches">
+                            <option value=" distention_of_abdomen">
+                            <option value=" dizziness">
+                            <option value=" drying_and_tingling_lips">
+                            <option value=" enlarged_thyroid">
+                            <option value=" excessive_hunger">
+                            <option value=" extra_marital_contacts">
+                            <option value=" family_history">
+                            <option value=" fast_heart_rate">
+                            <option value=" fatigue">
+                            <option value=" fluid_overload">
+                            <option value=" foul_smell_of urine">
+                            <option value=" headache">
+                            <option value=" high_fever">
+                            <option value=" hip_joint_pain">
+                            <option value=" history_of_alcohol_consumption">
+                            <option value=" increased_appetite">
+                            <option value=" indigestion">
+                            <option value=" inflammatory_nails">
+                            <option value=" internal_itching">
+                            <option value=" irregular_sugar_level">
+                            <option value=" irritability">
+                            <option value=" irritation_in_anus">
+                            <option value=" joint_pain">
+                            <option value=" knee_pain">
+                            <option value=" lack_of_concentration">
+                            <option value=" lethargy">
+                            <option value=" loss_of_appetite">
+                            <option value=" loss_of_balance">
+                            <option value=" loss_of_smell">
+                            <option value=" malaise">
+                            <option value=" mild_fever">
+                            <option value=" mood_swings">
+                            <option value=" movement_stiffness">
+                            <option value=" mucoid_sputum">
+                            <option value=" muscle_pain">
+                            <option value=" muscle_wasting">
+                            <option value=" muscle_weakness">
+                            <option value=" nausea">
+                            <option value=" neck_pain">
+                            <option value=" nodal_skin_eruptions">
+                            <option value=" obesity">
+                            <option value=" pain_behind_the_eyes">
+                            <option value=" pain_during_bowel_movements">
+                            <option value=" pain_in_anal_region">
+                            <option value=" painful_walking">
+                            <option value=" palpitations">
+                            <option value=" passage_of_gases">
+                            <option value=" patches_in_throat">
+                            <option value=" phlegm">
+                            <option value=" polyuria">
+                            <option value=" prominent_veins_on_calf">
+                            <option value=" puffy_face_and_eyes">
+                            <option value=" pus_filled_pimples">
+                            <option value=" receiving_blood_transfusion">
+                            <option value=" receiving_unsterile_injections">
+                            <option value=" red_sore_around_nose">
+                            <option value=" red_spots_over_body">
+                            <option value=" redness_of_eyes">
+                            <option value=" restlessness">
+                            <option value=" runny_nose">
+                            <option value=" rusty_sputum">
+                            <option value=" scurring">
+                            <option value=" shivering">
+                            <option value=" silver_like_dusting">
+                            <option value=" sinus_pressure">
+                            <option value=" skin_peeling">
+                            <option value=" skin_rash">
+                            <option value=" slurred_speech">
+                            <option value=" small_dents_in_nails">
+                            <option value=" spinning_movements">
+                            <option value=" spotting_ urination">
+                            <option value=" stiff_neck">
+                            <option value=" stomach_bleeding">
+                            <option value=" stomach_pain">
+                            <option value=" sunken_eyes">
+                            <option value=" sweating">
+                            <option value=" swelled_lymph_nodes">
+                            <option value=" swelling_joints">
+                            <option value=" swelling_of_stomach">
+                            <option value=" swollen_blood_vessels">
+                            <option value=" swollen_extremeties">
+                            <option value=" swollen_legs">
+                            <option value=" throat_irritation">
+                            <option value=" toxic_look_(typhos)">
+                            <option value=" ulcers_on_tongue">
+                            <option value=" unsteadiness">
+                            <option value=" visual_disturbances">
+                            <option value=" vomiting">
+                            <option value=" watering_from_eyes">
+                            <option value=" weakness_in_limbs">
+                            <option value=" weakness_of_one_body_side">
+                            <option value=" weight_gain">
+                            <option value=" weight_loss">
+                            <option value=" yellow_crust_ooze">
+                            <option value=" yellow_urine">
+                            <option value=" yellowing_of_eyes">
+                            <option value=" yellowish_skin">
+                            <option value=" itching">
+                            </select>
+                    </datalist>
+                </div>
+                <div class="symptom-box">
+                    <h4>Symptom 4</h4>
+                    <input list=text_editors4>
+                    <datalist id="text_editors4">
+                        <select name="symp4" required>
 
-        /* when user wants to type in text field, hide DDL */
-        input = document.querySelector('input');
-        input.addEventListener('focus', hide_select);
+                        <option value=" abdominal_pain">
+                            <option value=" abnormal_menstruation">
+                            <option value=" acidity">
+                            <option value=" acute_liver_failure">
+                            <option value=" altered_sensorium">
+                            <option value=" anxiety">
+                            <option value=" back_pain">
+                            <option value=" belly_pain">
+                            <option value=" blackheads">
+                            <option value=" bladder_discomfort">
+                            <option value=" blister">
+                            <option value=" blood_in_sputum">
+                            <option value=" bloody_stool">
+                            <option value=" blurred_and_distorted_vision">
+                            <option value=" breathlessness">
+                            <option value=" brittle_nails">
+                            <option value=" bruising">
+                            <option value=" burning_micturition">
+                            <option value=" chest_pain">
+                            <option value=" chills">
+                            <option value=" cold_hands_and_feets">
+                            <option value=" coma">
+                            <option value=" congestion">
+                            <option value=" constipation">
+                            <option value=" continuous_feel_of_urine">
+                            <option value=" continuous_sneezing">
+                            <option value=" cough">
+                            <option value=" cramps">
+                            <option value=" dark_urine">
+                            <option value=" dehydration">
+                            <option value=" depression">
+                            <option value=" diarrhoea">
+                            <option value=" dischromic _patches">
+                            <option value=" distention_of_abdomen">
+                            <option value=" dizziness">
+                            <option value=" drying_and_tingling_lips">
+                            <option value=" enlarged_thyroid">
+                            <option value=" excessive_hunger">
+                            <option value=" extra_marital_contacts">
+                            <option value=" family_history">
+                            <option value=" fast_heart_rate">
+                            <option value=" fatigue">
+                            <option value=" fluid_overload">
+                            <option value=" foul_smell_of urine">
+                            <option value=" headache">
+                            <option value=" high_fever">
+                            <option value=" hip_joint_pain">
+                            <option value=" history_of_alcohol_consumption">
+                            <option value=" increased_appetite">
+                            <option value=" indigestion">
+                            <option value=" inflammatory_nails">
+                            <option value=" internal_itching">
+                            <option value=" irregular_sugar_level">
+                            <option value=" irritability">
+                            <option value=" irritation_in_anus">
+                            <option value=" joint_pain">
+                            <option value=" knee_pain">
+                            <option value=" lack_of_concentration">
+                            <option value=" lethargy">
+                            <option value=" loss_of_appetite">
+                            <option value=" loss_of_balance">
+                            <option value=" loss_of_smell">
+                            <option value=" malaise">
+                            <option value=" mild_fever">
+                            <option value=" mood_swings">
+                            <option value=" movement_stiffness">
+                            <option value=" mucoid_sputum">
+                            <option value=" muscle_pain">
+                            <option value=" muscle_wasting">
+                            <option value=" muscle_weakness">
+                            <option value=" nausea">
+                            <option value=" neck_pain">
+                            <option value=" nodal_skin_eruptions">
+                            <option value=" obesity">
+                            <option value=" pain_behind_the_eyes">
+                            <option value=" pain_during_bowel_movements">
+                            <option value=" pain_in_anal_region">
+                            <option value=" painful_walking">
+                            <option value=" palpitations">
+                            <option value=" passage_of_gases">
+                            <option value=" patches_in_throat">
+                            <option value=" phlegm">
+                            <option value=" polyuria">
+                            <option value=" prominent_veins_on_calf">
+                            <option value=" puffy_face_and_eyes">
+                            <option value=" pus_filled_pimples">
+                            <option value=" receiving_blood_transfusion">
+                            <option value=" receiving_unsterile_injections">
+                            <option value=" red_sore_around_nose">
+                            <option value=" red_spots_over_body">
+                            <option value=" redness_of_eyes">
+                            <option value=" restlessness">
+                            <option value=" runny_nose">
+                            <option value=" rusty_sputum">
+                            <option value=" scurring">
+                            <option value=" shivering">
+                            <option value=" silver_like_dusting">
+                            <option value=" sinus_pressure">
+                            <option value=" skin_peeling">
+                            <option value=" skin_rash">
+                            <option value=" slurred_speech">
+                            <option value=" small_dents_in_nails">
+                            <option value=" spinning_movements">
+                            <option value=" spotting_ urination">
+                            <option value=" stiff_neck">
+                            <option value=" stomach_bleeding">
+                            <option value=" stomach_pain">
+                            <option value=" sunken_eyes">
+                            <option value=" sweating">
+                            <option value=" swelled_lymph_nodes">
+                            <option value=" swelling_joints">
+                            <option value=" swelling_of_stomach">
+                            <option value=" swollen_blood_vessels">
+                            <option value=" swollen_extremeties">
+                            <option value=" swollen_legs">
+                            <option value=" throat_irritation">
+                            <option value=" toxic_look_(typhos)">
+                            <option value=" ulcers_on_tongue">
+                            <option value=" unsteadiness">
+                            <option value=" visual_disturbances">
+                            <option value=" vomiting">
+                            <option value=" watering_from_eyes">
+                            <option value=" weakness_in_limbs">
+                            <option value=" weakness_of_one_body_side">
+                            <option value=" weight_gain">
+                            <option value=" weight_loss">
+                            <option value=" yellow_crust_ooze">
+                            <option value=" yellow_urine">
+                            <option value=" yellowing_of_eyes">
+                            <option value=" yellowish_skin">
+                            <option value=" itching">
+                            </select>
+                    </datalist>
+                </div>
 
-        function hide_select() {
-            datalist.style.display = '';
-            button.textContent = "▼";
-        }
-    </script>
+
+            </div>
+            <input type="submit" class="myButton" value="Predict disease">
+        </form>
+        <h3>{{ prediction }}</h3>
+    </div>
+    
 </body>
 <style>
-    body {
-        text-align: center;
+    html {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-size: 62.5%;
+        font-style: bold;
+
     }
 
-    body,
-    input,
-    button {
-        font-family: palatino;
-        font-size: 12pt;
+    body {
+        margin: 0;
+        padding: 0;
+        min-height: 500rem;
+
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: 1s;
+        padding: 1rem 1rem;
+        background: linear-gradient(45deg, #05f9ff, #8de7b6, #00b5ff);
+        font-size: 2rem;
+        font-family: "Roboto", sans-serif;
+    }
+
+    header.sticky {
+        padding: 1rem 1rem;
+
+
+    }
+
+    header .logo {
+        position: relative;
+        font-weight: 700;
+        color: #fff;
+        text-decoration: none;
+        font-size: 3em;
+
+    }
+
+    nav ul {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    nav ul li {
+        position: relative;
+        list-style: none;
+    }
+
+    nav ul li a {
+        position: relative;
+        margin: 0 15px;
+        text-decoration: none;
+        color: white;
+        letter-spacing: 2px;
+        font-weight: 500px;
+        transition: 0.6s;
+    }
+
+    .cool-link:hover {
+        border-bottom: 0.5rem double white;
+
+    }
+
+    header.sticky logo,
+    header.sticky ul li a {
+        color: #000;
+    }
+
+    .container-3 {
+        position: relative;
+        top: 100px;
+        width: 100%;
+        background-color: rgb(184, 239, 243);
+
+    }
+    .container-4{
+        position: relative;
+        width:100%;
+        height:35rem;
+    }
+
+    
+
+    .input-form {
+        height: 100rem;
+        width: 100%;
+        display: flex;
+        
+        justify-content: space-between;
+
+    }
+    .symptom-box {
+        padding-top: 10rem;
+        margin: 5px;
+        width: 100%;
+       
+
     }
 
     input {
@@ -106,6 +717,7 @@
         height: 30px;
         padding: 3px;
         border: 1px solid #DDE1E4;
+        font-size:1.5rem;
     }
 
     select {
@@ -120,6 +732,7 @@
 
     datalist {
         display: none;
+        
     }
 
     option {
@@ -127,7 +740,7 @@
     }
 
     option:hover {
-        background-color: #11E8EA;
+        background-color: #ea6811;
     }
 
     button {
@@ -141,17 +754,37 @@
         cursor: pointer;
     }
 
-    h3,
-    h4 {
+    h3 {
         text-align: center;
     }
 
+    .container-3 h3 {
+        font-size: 50px;
+        text-align: center;
+
+    }
+
+    .myButton {
+        align-items: center;
+        text-align: center;
+
+    }
 
     /* to hide datalist arrow in webkit */
 
     input::-webkit-calendar-picker-indicator {
         display: none;
     }
+
+    .footer {
+        width: 100%;
+        height: 50px;
+        background-color: green;
+    }
 </style>
 
 </html>
+
+
+
+<h3>{{ prediction }}</h3>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Output</title>
+</head>
+<body>
+   <!-- <header>
+        <a href="#" class="logo">Logo</a>
+        <nav>
+            <ul>
+                <li><a href="#" class="cool-link">Home</a></li>
+                <li><a href="#" class="cool-link">About</a></li>
+                <li><a href="#features" class="cool-link">Features</a></li>
+                <li><a href="#" class="cool-link">Team</a></li>
+                <li><a href="#" class="cool-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    -->
+
+    {{prediction}}
+    <br>
+
+    {{description}}
+<br>
+    {{treatment}}
+
+
+
+</body>
+<style>
+    html {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-size: 62.5%;
+        font-style: bold;
+
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        min-height: 100rem;
+
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: 1s;
+        padding: 1rem 1rem;
+        background: linear-gradient(45deg, #05f9ff, #8de7b6, #00b5ff);
+        font-size: 2rem;
+        font-family: "Roboto", sans-serif;
+    }
+
+    header.sticky {
+        padding: 1rem 1rem;
+
+
+    }
+
+    header .logo {
+        position: relative;
+        font-weight: 700;
+        color: #fff;
+        text-decoration: none;
+        font-size: 3em;
+
+    }
+
+    nav ul {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    nav ul li {
+        position: relative;
+        list-style: none;
+    }
+
+    nav ul li a {
+        position: relative;
+        margin: 0 15px;
+        text-decoration: none;
+        color: white;
+        letter-spacing: 2px;
+        font-weight: 500px;
+        transition: 0.6s;
+    }
+
+    .cool-link:hover {
+        border-bottom: 0.5rem double white;
+
+    }
+
+    header.sticky logo,
+    header.sticky ul li a {
+        color: #000;
+    }
+
+</style>
+</html>

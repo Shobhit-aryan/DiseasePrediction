@@ -12,21 +12,22 @@
         <a href="#" class="logo">Logo</a>
         <nav>
             <ul>
-                <li><a href="#" class="cool-link">Home</a></li>
+                <li><a href="index.html" class="cool-link">Home</a></li>
                 <li><a href="#" class="cool-link">About</a></li>
                 <li><a href="#features" class="cool-link">Features</a></li>
-                <li><a href="#" class="cool-link">Team</a></li>
+                <li><a href="#team" class="cool-link">Team</a></li>
                 <li><a href="#" class="cool-link">Contact</a></li>
             </ul>
         </nav>
     </header>
     <section class="banner">
-        <h1>AI Driven pocket docter</h1><br>
+        <h2>AI Driven pocket docter</h2><br>
         <p>Now predict the disease with few easy steps</p><br>
         <div class="container-1">
             <img id="doctorpic" src="doctor.svg">
         </div>
     </section>
+    <h1>OUR FEATURES</h1>
     <section id="features">
         <div class="container-2">
             <div class="card">
@@ -78,6 +79,26 @@
                         consequuntu</p>
                     <a href="#">Click Here</a>
                 </div>
+            </div>
+        </div>
+    </section>
+    <h1>OUR TEAM</h1>
+    <section id="team">
+        <div class="box">
+            <div class="tmBox">
+                <img src="img1.jpg">
+            </div>
+            <div class="tmContent">
+                <h2>Shobhit Aryan Lal<br><span>Creative Designer | Machine Learning Developer</span></h2>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="tmBox">
+                <img src="img2.jpg">
+            </div>
+            <div class="tmContent">
+                <h2>Shobhit Aryan Lal<br><span>Creative Designer | Machine Learning Developer</span></h2>
             </div>
         </div>
     </section>
@@ -223,7 +244,7 @@
         color: #000;
     }
 
-    .banner h1 {
+    .banner h2 {
         padding-left: 3rem;
         display: inline;
         position: relative;
@@ -304,7 +325,7 @@
         position: absolute;
         top: -15px;
         left: 0;
-        width:
+       
     }
 
     .container-2 .card:hover {
@@ -358,6 +379,99 @@
     .container-2 .card .content a:hover {
         box-shadow: inset -4px -4px 10px rgba(255, 255, 255, 1),
             inset 4px 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    h1 {
+        margin: 0;
+        padding: 0;
+        font-size: 5rem;
+        text-align: center;
+        border-bottom: 5px;
+        background: linear-gradient(45deg, #05f9ff, #8de7b6, #00b5ff);;
+    }
+
+    #team {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        min-height: 100vh;
+        background: #ebf5fc;
+    }
+
+
+    .box {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 40px;
+        background: linear-gradient(45deg, #05f9ff, #8de7b6, #00b5ff);
+        opacity: 1;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+
+    .box:hover {
+        height: 400px;
+    }
+
+    .box .tmBox {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .box .tmBox img {
+        max-width: 100%;
+        opacity: 0.1;
+        transition: 0.5s;
+
+    }
+
+    .box:hover .tmBox img {
+        opacity: 1;
+    }
+
+    
+
+    .box .tmContent {
+        position: absolute;
+        bottom: 0;
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        height: 90px;
+        background: rgba(0, 0, 0, 0.4);
+        display: flex;
+        justify-content: center;
+        opacity: 0;
+        transition: 0.5s;
+    }
+
+    .box:hover .tmContent {
+        opacity: 1;
+    }
+
+    .box .tmContent h2 {
+        font-size: 20px;
+        color: #fff;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 1px;
+    }
+
+    .box .tmContent h2 span {
+        font-size: 14px;
+        color: #fff;
+        font-weight: 200;
+        letter-spacing: 2px;
     }
 </style>
 
