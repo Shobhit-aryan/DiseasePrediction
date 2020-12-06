@@ -1,4 +1,3 @@
-
 from flask import Flask, render_template, request
 import pickle
 import pandas as pd
@@ -14,13 +13,33 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     return render_template('index.html')
-
+@app.route('/index.html')
+def index():
+    return render_template('index.html')
 @app.route('/symptom.html')
 def symp():
     return render_template('symptom.html')
 @app.route('/output.html')
 def out():
     return render_template('output.html')
+@app.route('/atozmedicine.html')
+def atozmedicine():
+    return render_template('atozmedicine.html')
+@app.route('/atozdisease.html')
+def atozdisease():
+    return render_template('atozdisease.html')
+@app.route('/atoztest.html')
+def atoztest():
+    return render_template('atoztest.html')
+@app.route('/a1.html')
+def a1():
+    return render_template('a1.html')
+@app.route('/a2.html')
+def a2():
+    return render_template('a2.html')
+@app.route('/a3.html')
+def a3():
+    return render_template('a3.html')
 @app.route('/predict', methods=['POST'])
 def predict():
     if request.method=='POST':

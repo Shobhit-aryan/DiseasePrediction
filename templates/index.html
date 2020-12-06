@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
 </head>
 
 <body>
     <header>
-        <a href="#" class="logo">Logo</a>
+        <a href="#" class="logo">MedHacks</a>
         <nav>
             <ul>
                 <li><a href="index.html" class="cool-link">Home</a></li>
@@ -24,7 +24,7 @@
         <h2>AI Driven pocket docter</h2><br>
         <p>Now predict the disease with few easy steps</p><br>
         <div class="container-1">
-            <img id="doctorpic" src="doctor.svg">
+            <img id="doctorpic" src="{{ url_for('static', filename='doctor.svg') }}">
         </div>
     </section>
     <h1>OUR FEATURES</h1>
@@ -32,7 +32,7 @@
         <div class="container-2">
             <div class="card">
                 <div class="imgBx">
-                    <img src="symptom.png">
+                    <img src="{{ url_for('static', filename='symptom.png') }}">
                     <h3>Symptom Checker</h3>
                 </div>
                 <div class="content">
@@ -46,38 +46,34 @@
             </div>
             <div class="card">
                 <div class="imgBx">
-                    <img src="disease.png">
+                    <img src="{{ url_for('static', filename='disease.png') }}">
                     <h3>Disease and conditions</h3>
                 </div>
                 <div class="content">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Aliquid, ea. Quo necessitatibus, numquam animi vero
-                        consequuntu</p>
-                    <a href="#">Click Here</a>
+                    <p>Comprehensive guide for disease and conditions. For detail information on disease
+                         and conditions check out this A to Z disease list.</p>
+                    <a href="atozdisease.html">Click Here</a>
                 </div>
             </div>
             <div class="card">
                 <div class="imgBx">
-                    <img src="medicine.png">
+                    <img src="{{ url_for('static', filename='medicine.png') }}">
                     <h3>Drugs and supplement</h3>
                 </div>
                 <div class="content">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Aliquid, ea. Quo necessitatibus, numquam animi vero
-                        consequuntu</p>
-                    <a href="#">Click Here</a>
+                    <p>Comprehensive guide for medicines. For detail information on medicines check out this A to Z medicine list.</p>
+                    <a href="atozmedicine.html">Click Here</a>
                 </div>
             </div>
             <div class="card">
                 <div class="imgBx">
-                    <img src="test.png">
+                    <img src="{{ url_for('static', filename='test.png') }}">
                     <h3>Tests and Procedures</h3>
                 </div>
                 <div class="content">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Aliquid, ea. Quo necessitatibus, numquam animi vero
-                        consequuntu</p>
-                    <a href="#">Click Here</a>
+                    <p>Comprehensive guide for tests and procedures. For detail information on tests and procedures
+                    check out this A to Z tests and procedures list.</p>
+                    <a href="atoztest.html">Click Here</a>
                 </div>
             </div>
         </div>
@@ -86,19 +82,81 @@
     <section id="team">
         <div class="box">
             <div class="tmBox">
-                <img src="img1.jpg">
+                <img src="{{ url_for('static', filename='shobhit1.jpg') }}">
             </div>
             <div class="tmContent">
-                <h2>Shobhit Aryan Lal<br><span>Creative Designer | Machine Learning Developer</span></h2>
+                <h2>Shobhit Aryan Lal<br><span>Creative Designer | Machine Learning Developer | Web Developer</span></h2>
             </div>
         </div>
 
         <div class="box">
             <div class="tmBox">
-                <img src="img2.jpg">
+                <img src="{{ url_for('static', filename='himanshu.jpg') }}">
             </div>
             <div class="tmContent">
-                <h2>Shobhit Aryan Lal<br><span>Creative Designer | Machine Learning Developer</span></h2>
+                <h2>Himanshu Dubey<br><span>Product Analyst | Software Tester | Technical Content Writer</span></h2>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacts" >
+        <div class="container-3">
+            <div class="contactinfo">
+                    <h2>Contact Info</h2>
+                    <ul class="info">
+                        <li>
+                            <span><img src="{{ url_for('static', filename='location.png') }}"></span>
+                            <span>NekChand Tower<br>Chandigarh University, Mohali<br>112233</span>
+                        </li>
+                        <li>
+                            <span><img src="{{ url_for('static', filename='mail.png') }}"></span>
+                            <span>lorem@gmail.com</span>
+                        </li>
+                        <li>
+                            <span><img src="{{ url_for('static', filename='call.png') }}"></span>
+                            <span>213-231-1531</span>
+                        </li>
+                    </ul>
+                    <ul class="sci">
+                        <li><a href="#"><img src="{{ url_for('static', filename='1.png') }}"></a></li>
+                        <li><a href="#"><img src="{{ url_for('static', filename='2.png') }}"></a></li>
+                        <li><a href="#"><img src="{{ url_for('static', filename='3.png') }}"></a></li>
+                        <li><a href="#"><img src="{{ url_for('static', filename='4.png') }}"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="contactForm">
+                <h2 style="color:white; font-size: 50px;">Send a message</h2>
+                <div class="formBox">
+                    <div class="inputBox w50">
+                        <span style="color:white; font-size: 20px;">First Name  :</span>
+                        <input type="text" name="" required>
+                        
+                    </div>
+                    <br>
+                    <div class="inputBox w50">
+                        <span style="color:white; font-size: 20px;">Last Name  :</span>
+                        <input type="text" name="" required>
+                    </div>
+                    <br>
+                    <div class="inputBox w50">
+                        <span style="color:white; font-size: 20px;">Email Address  :</span>
+                        <input type="text" name="" required>
+                    </div>
+                    <br>
+                    <div class="inputBox w50">
+                        <span style="color:white; font-size: 20px;">Mobile Number  :</span>
+                        <input type="text" name="" required>
+                    </div>
+                    <br>
+                    <div class="inputBox w100">
+                        <span style="color:white; font-size: 20px;">Write your message here...</span>
+                        <textarea name="" required></textarea>
+                    </div>
+                    <div class="inputBox w100">
+                        <input type="submit" value="send">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -124,7 +182,7 @@
     body {
         margin: 0;
         padding: 0;
-        min-height: 500rem;
+        min-height: 3   00rem;
     }
 
     header {
@@ -473,6 +531,121 @@
         font-weight: 200;
         letter-spacing: 2px;
     }
+
+    #contacts{
+      position: relative;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 100vh;
+      background:#112d42;  
+    }
+    #contacts::before{
+        content:'';
+        position: absolute;
+        top:0;
+        left:0;
+        width: 50%;
+        height: 100%;
+        background: #03a9f4;
+        }
+    #contacts .container-3{
+        position: relative;
+        min-width:1100px;
+        min-height:550px;
+        display: flex;
+        z-index: 1000;
+    }
+    #contacts .container-3 .contactinfo{
+        position: absolute;
+        top:40px;
+        width: 350px;
+        height: calc(100%-80px);
+        background: #0f3959;
+        z-index: 1;
+        padding:40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-shadow: 0 20px rgba(0,0,0,0.2);
+    }
+    #contacts .container-3 .contactinfo h2{
+        color:white;
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    #contacts .container-3 .contactinfo .info{
+        position: relative;
+        margin:30px 0;
+    }
+    #contacts .container-3 .contactinfo .info li{
+        position: relative;
+        list-style: none;
+        display: flex;
+        margin:20px 0;
+        cursor: pointer;
+        align-items: flex-start;
+    }
+    #contacts .container-3 .contactinfo .info li span:nth-child(1){
+        width: 50px;
+        min-width: 50px;
+    }
+    #contacts .container-3 .contactinfo .info li span:nth-child(1) img{
+        max-width: 100%;
+        filter:invert(1);
+        opacity:0.5; 
+        width: 30px;
+        height: 30px;
+    }
+    #contacts .container-3 .contactinfo .info li span:nth-child(2){
+        color: #fff;
+        margin-left: 10px;
+        font-weight: 300;
+        opacity: 0.5;
+        font-size: 15px;
+    }
+    #contacts .container-3 .contactinfo .info li:hover span:nth-child(2) img,
+    #contacts .container-3 .contactinfo .info li:hover span:nth-child(2)
+    {
+        opacity:1;  
+    }
+    #contacts .container-3 .contactinfo .sci{
+        position: relative;
+        display: flex;
+
+    }
+    #contacts .container-3 .contactinfo .sci li{
+        list-style: none;
+        margin-right: 15px;
+
+    }
+    #contacts .container-3 .contactinfo .sci li a{
+        text-decoration: none;   
+    }
+    #contacts .container-3 .contactinfo .sci li a img{
+        filter:invert(1);
+        height: 30px;
+        width:30px;
+        opacity:0.5;
+    }
+    #contacts .container-3 .contactinfo .sci li:hover a img{
+        opacity:1;
+    }
+
+    #contacts .container-3 .contactForm{
+        position: absolute;
+        padding: 70px 50px;
+        color: white;
+        background: #fff;
+        margin-left: 150px;
+        padding-left: 250px;
+        width:calc(100%-150px);
+        height:100%;
+        box-shadow: 0 50px 50px rgba(0, 0, 0, 0.2);
+    }
+   
+
 </style>
 
 </html>
